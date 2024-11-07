@@ -24,6 +24,33 @@
             }
         }
     </script>
+    <script>
+        function filterGallery(category) {
+            // Update active button state
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-teal-600', 'text-white');
+                btn.classList.add('bg-white');
+            });
+            event.currentTarget.classList.remove('bg-white');
+            event.currentTarget.classList.add('bg-teal-600', 'text-white');
+    
+            // Filter gallery items
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    
+        // Initialize with 'all' filter active
+        document.addEventListener('DOMContentLoaded', () => {
+            filterGallery('all');
+        });
+    </script>
 </head>
 <body class="min-h-screen" style="background-image: url('img/TS_Website_V7pdf_page-0001-min-crop.jpg'); background-repeat: repeat-y;background-size: contain;">
     <!-- Navigation -->
@@ -183,48 +210,37 @@
     <!-- Gallery Section -->
     <section class="max-w-6xl mx-auto px-4 py-16">
         <h2 class="text-4xl font-bold mb-8">Gallery</h2>
-        <p class="md-4 mb-8 text-2xl max-w-4xl text-gray-600">
-            At Thamaya Solutions, we thrive on the art of bringing vision to life.We are more than an agency, we are;
-        </p>
         <div class="flex flex-wrap gap-4 mb-8">
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('all')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition active">
                 All
             </button>
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('luxury-packaging')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
                 Luxury Packaging
             </button>
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('fabrications')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
                 Fabrications
             </button>
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('design-concepts')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
                 Design & Concepts
             </button>
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('creative-direction')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
                 Creative Direction
             </button>
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('events')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
                 Events
             </button>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+            <div class="gallery-item aspect-square bg-gray-100 rounded-lg overflow-hidden" data-category="events">
                 <img src="img/exhibition-stall.jpg" alt="Gallery item" class="w-full h-full object-cover" />
             </div>
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+            <div class="gallery-item aspect-square bg-gray-100 rounded-lg overflow-hidden" data-category="luxury-packaging">
                 <img src="img/The-concept-Match-box_3.jpg" alt="Gallery item" class="w-full h-full object-cover" />
             </div>
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+            <div class="gallery-item aspect-square bg-gray-100 rounded-lg overflow-hidden" data-category="design-concepts">
                 <img src="img/concept-teal-box.JPG" alt="Gallery item" class="w-full h-full object-cover" />
             </div>
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                <img src="/api/placeholder/400/400" alt="Gallery item" class="w-full h-full object-cover" />
-            </div>
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                <img src="/api/placeholder/400/400" alt="Gallery item" class="w-full h-full object-cover" />
-            </div>
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                <img src="/api/placeholder/400/400" alt="Gallery item" class="w-full h-full object-cover" />
-            </div>
+            <!-- Add more gallery items with appropriate data-category attributes -->
         </div>
     </section>
 
