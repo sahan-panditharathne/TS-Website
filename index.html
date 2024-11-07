@@ -24,36 +24,73 @@
             }
         }
     </script>
+    <script>
+        function filterGallery(category) {
+            // Update active button state
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-teal-600', 'text-white');
+                btn.classList.add('bg-white');
+            });
+            event.currentTarget.classList.remove('bg-white');
+            event.currentTarget.classList.add('bg-teal-600', 'text-white');
+    
+            // Filter gallery items
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    
+        // Initialize with 'all' filter active
+        document.addEventListener('DOMContentLoaded', () => {
+            filterGallery('all');
+        });
+    </script>
 </head>
-<body class="min-h-screen" style="background-image: url('img/TS_Website_V7pdf_page-0001-min.jpg'); background-repeat: repeat-y;">
+<body class="min-h-screen" style="background-image: url('img/Artboard\ 1-min.png'); background-position: center top; background-repeat: repeat-y;
+background-size: cover; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;">
     <!-- Navigation -->
-    <nav class="p-4 border-b-2 border-white">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <nav class="pb-0 px-4 mt-0 border-white">
+        <div class="max-w-6xl m-auto">
+        <div class="flex justify-between items-center">
             <!--<div class="text-2xl font-bold">Thamaya Solutions</div>-->
             <div>
                 <img src="img/logo.png" alt="Thamaya solutions logo">
             </div>
-            <div class="hidden md:flex space-x-16 text-xl text-white font-bold">
+            <div class="hidden md:flex space-x-16 text-xl text-white">
                 <a href="#" class="hover:underline hover:text-black hover:underline-offset-2">Home</a>
                 <a href="#" class="hover:underline hover:text-black hover:underline-offset-2">About us</a>
                 <a href="#" class="hover:underline hover:text-black hover:underline-offset-2">Services</a>
                 <a href="#" class="hover:underline hover:text-black hover:underline-offset-2">Contact Us</a>
             </div>
         </div>
+        <hr class="h-2 text-white mt-2 ml-4 ml-auto">
+    </div>
     </nav>
-
+    <main class="max-w-6xl mx-auto">
     <!-- Hero Section -->
     <section class="text-center py-20 px-4 text-center mt-20">
         <h1 class="md:text-8xl mb-8 text-white">Ideate | Design | Create</h1>
-        <p class="mt-4 text-lg text-black max-w-4xl mx-auto mb-8 flex justify-between items-center">From concept ideation, to brand design and final creation Thamaya Solutions has you covered. We’re a diverse team of planners and creatives ready to solve all your creative problems. </p>
-        <button class="bg-white mt-4 text-Teal font-bold px-8 py-3 rounded-full hover:bg-Teal hover:text-white transition">
-            CONNECT
+        <p class="mt-4 text-lg text-gray-300 max-w-4xl mx-auto mb-8 flex justify-between items-center">From concept ideation, to brand design and final creation Thamaya Solutions has you covered. We’re a diverse team of planners and creatives ready to solve all your creative problems. </p>
+        <button class="bg-white mt-4 text-Teal font-bold px-8 py-3 rounded-full hover:bg-teal-600 hover:text-white transition">
+            BOOK A CALL
         </button>
     </section>
 
     <!-- Services Section -->
     <section class="max-w-6xl mx-auto px-4 py-16">
         <h2 class="text-4xl font-bold mb-8">What we do</h2>
+        <p class="mt-4 text-lg max-w-4xl mb-8 text-gray-600">
+            Extremely eagerness principle estimable own was man.Connection too unaffected expression led son possession.  Men received far his dashwood subjects new. My sufficient surrounded an companions dispatched in on. Connection too unaffected expression led son possession. New smiling friends.
+        </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Design & Concepts Card -->
             <div class="rounded-xl p-6 hover:shadow-xl transition-shadow duration-300">
@@ -180,42 +217,40 @@
     <!-- Gallery Section -->
     <section class="max-w-6xl mx-auto px-4 py-16">
         <h2 class="text-4xl font-bold mb-8">Gallery</h2>
+        <p class="md-4 mb-6">
+            At Thamaya Solutions, we thrive on the art of bringing vision to life.We are more than an agency, we are;
+        </p>
         <div class="flex flex-wrap gap-4 mb-8">
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('all')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition active">
+                All
+            </button>
+            <button onclick="filterGallery('luxury-packaging')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
                 Luxury Packaging
             </button>
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('fabrications')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
                 Fabrications
             </button>
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('design-concepts')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
                 Design & Concepts
             </button>
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('creative-direction')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
                 Creative Direction
             </button>
-            <button class="px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
+            <button onclick="filterGallery('events')" class="filter-btn px-4 py-2 bg-white rounded-full hover:bg-teal-600 hover:text-white transition">
                 Events
             </button>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+            <div class="gallery-item aspect-square bg-gray-100 rounded-lg overflow-hidden" data-category="events">
                 <img src="img/exhibition-stall.jpg" alt="Gallery item" class="w-full h-full object-cover" />
             </div>
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+            <div class="gallery-item aspect-square bg-gray-100 rounded-lg overflow-hidden" data-category="luxury-packaging">
                 <img src="img/The-concept-Match-box_3.jpg" alt="Gallery item" class="w-full h-full object-cover" />
             </div>
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+            <div class="gallery-item aspect-square bg-gray-100 rounded-lg overflow-hidden" data-category="design-concepts">
                 <img src="img/concept-teal-box.JPG" alt="Gallery item" class="w-full h-full object-cover" />
             </div>
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                <img src="/api/placeholder/400/400" alt="Gallery item" class="w-full h-full object-cover" />
-            </div>
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                <img src="/api/placeholder/400/400" alt="Gallery item" class="w-full h-full object-cover" />
-            </div>
-            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                <img src="/api/placeholder/400/400" alt="Gallery item" class="w-full h-full object-cover" />
-            </div>
+            <!-- Add more gallery items with appropriate data-category attributes -->
         </div>
     </section>
 
@@ -371,11 +406,7 @@
                 <div class="space-y-8">
                     <!-- Map Placeholder -->
                     <div class="bg-gray-200 rounded-xl overflow-hidden h-64">
-                        <img 
-                            src="/api/placeholder/800/400" 
-                            alt="Location Map" 
-                            class="w-full h-full object-cover"
-                        >
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0384099082635!2d79.88941967629493!3d6.886002793112958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b96c6d849df%3A0x4818e03892fbcaf!2sThamaya%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1730971810209!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
                     <!-- Contact Details -->
@@ -440,7 +471,7 @@
             </div>
         </div>
     </section>
-
+    </main>
     <!-- Footer -->
     <footer class="bg-white/30 py-12">
         <div class="max-w-6xl mx-auto px-4">
