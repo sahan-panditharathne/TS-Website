@@ -24,6 +24,16 @@
             }
         }
     </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .menu-item {
+            @apply hover:underline hover:text-black hover:underline-offset-4 hover:decoration-teal-600 hover:decoration-4;
+            }
+            .section-heading{
+            @apply text-4xl font-bold mb-12 text-center underline underline-offset-8 decoration-teal-600
+            }
+        }
+    </style>
     <script>
         function filterGallery(category) {
             // Update active button state
@@ -63,10 +73,10 @@ background-size: cover;">
                 <img src="img/logo.png" alt="Thamaya solutions logo">
             </div>
             <div class="hidden md:flex space-x-16 text-xl text-white">
-                <a href="#" class="hover:underline hover:text-black hover:underline-offset-2">Home</a>
-                <a href="#" class="hover:underline hover:text-black hover:underline-offset-2">About us</a>
-                <a href="#" class="hover:underline hover:text-black hover:underline-offset-2">Services</a>
-                <a href="#" class="hover:underline hover:text-black hover:underline-offset-2">Contact Us</a>
+                <a href="#" class="menu-item">Home</a>
+                <a href="#" class="menu-item">About us</a>
+                <a href="#" class="menu-item">Services</a>
+                <a href="#" class="menu-item">Contact Us</a>
             </div>
         </div>
         <hr class="h-2 text-white mt-2 ml-4 ml-auto">
@@ -84,7 +94,7 @@ background-size: cover;">
 
     <!-- Services Section -->
     <section class="max-w-6xl mx-auto px-4 py-16">
-        <h2 class="text-4xl font-bold mb-8 underline underline-offset-8 decoration-teal-600">What we do</h2>
+        <h2 class="section-heading">What we do</h2>
         <p class="mt-4 text-lg max-w-4xl mb-8 text-gray-600">
             Extremely eagerness principle estimable own was man.Connection too unaffected expression led son possession.  Men received far his dashwood subjects new. My sufficient surrounded an companions dispatched in on. Connection too unaffected expression led son possession. New smiling friends.
         </p>
@@ -175,7 +185,7 @@ background-size: cover;">
         <div class="bg-white/50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-4xl font-bold mb-6 underline underline-offset-8 decoration-teal-600">About Us</h2>
+                    <h2 class="section-heading">About Us</h2>
                     <p class="mb-4">
                         At Thamaya Solutions, we thrive on the art of bringing visions to life. We are more than an agency; we are your partner in transforming ideas into reality, ensuring every detail resonates with the essence of creativity and excellence. With four years of experience in the industry, we’ve built a reputation for delivering exceptional results through thoughtful planning and innovation.
                     </p>
@@ -193,7 +203,7 @@ background-size: cover;">
     <section class="relative py-32">
       <img src="img/coffee.jpg" alt="Stats Background" class="absolute inset-0 w-full h-full object-cover" />
       <div class="relative max-w-6xl mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-12 text-center text-black">Where we're at</h2>
+        <h2 class="section-heading">Where we're at</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="bg-white/70 p-6 rounded-lg text-center">
             <div class="text-4xl font-bold mb-2 text-teal-600">450+</div>
@@ -213,7 +223,7 @@ background-size: cover;">
 
     <!-- Gallery Section -->
     <section class="max-w-6xl mx-auto px-4 py-16">
-        <h2 class="text-4xl font-bold mb-8 underline underline-offset-8 decoration-teal-600">Gallery</h2>
+        <h2 class="section-heading">Gallery</h2>
         <p class="md-4 mb-6">
             At Thamaya Solutions, we thrive on the art of bringing vision to life.We are more than an agency, we are;
         </p>
@@ -253,7 +263,7 @@ background-size: cover;">
 
     <!-- Team Section -->
     <section class="max-w-6xl mx-auto px-4 py-16">
-        <h2 class="text-4xl font-bold mb-12 text-center underline underline-offset-8 decoration-teal-600">Meet Our Team</h2>
+        <h2 class="section-heading">Meet Our Team</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="text-center">
                 <div class="rounded-lg overflow-hidden mb-4 aspect-[4/5] relative">
@@ -317,7 +327,7 @@ background-size: cover;">
     <!-- Contact Us Section -->
     <section class="py-16">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 underline underline-offset-8 decoration-teal-600">Contact Us</h2>
+            <h2 class="section-heading">Contact Us</h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Contact Form -->
                 <div class="bg-white rounded-xl shadow-lg p-8">
