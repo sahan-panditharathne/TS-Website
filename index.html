@@ -6,7 +6,6 @@
     <title>Thamaya Solutions</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -19,7 +18,16 @@
                     },
                     fontFamily: {
                     'body': ['"Poppins"'],
-                    }
+                    },
+                    keyframes: {
+                        'slide-left': {
+                        from: { transform: 'translateX(0)' },
+                        to: { transform: 'translateX(-100%)' },
+                        },
+                    },
+                    animation: {
+                        'slide-left-infinite': 'slide-left 15s linear infinite',
+                    },
                 }
             }
         }
@@ -276,6 +284,47 @@ background-size: cover;">
                 <img src="img/concept-teal-box.JPG" alt="Gallery item" class="w-full h-full object-cover" />
             </div>
             <!-- Add more gallery items with appropriate data-category attributes -->
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-16">
+        <div class=" rounded-xl p-6 transition-shadow duration-300">
+            <h2 class="section-heading text-center">Our Clients</h2>
+            <div class="logos group relative overflow-hidden whitespace-nowrap py-3 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)] ">
+                <div class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+                <!-- Ensure that the images cover entire screen width for a smooth transition -->
+                <img class="mx-4 inline h-16" src="img/logos/australia-aid.png" alt="australia-aid" />
+                <img class="mx-4 inline h-16" src="img/logos/cima.png" alt="cima" />
+                <img class="mx-4 inline h-16" src="img/logos/cinnamon-hotels.png" alt="cinnamon-hotels" />
+                <img class="mx-4 inline h-16" src="img/logos/clear-media.png" alt="clear-media" />
+                <img class="mx-4 inline h-16" src="img/logos/goethe.png" alt="goethe" />
+                <img class="mx-4 inline h-16" src="img/logos/hatch.png" alt="hatch" />
+                <img class="mx-4 inline h-16" src="img/logos/john-keells-holdings.png" alt="john-keells-holdings" />
+                <img class="mx-4 inline h-16" src="img/logos/john-keells-prperties.png" alt="john-keells-prperties" />
+                <img class="mx-4 inline h-16" src="img/logos/koica-logo.png" alt="koica" />
+                <img class="mx-4 inline h-16" src="img/logos/mas.png" alt="MAS holdings" />
+                <img class="mx-4 inline h-16" src="img/logos/MBA-Alumini.png" alt="MBA-Alumini" />
+                <img class="mx-4 inline h-16" src="img/logos/mdf.png" alt="mdf" />
+                <img class="mx-4 inline h-16" src="img/logos/softlogic-life.png" alt="softlogic-life" />
+                </div>
+                <!--Duplicate of the logos-->
+                <div class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+                <!-- Ensure that the images cover entire screen width for a smooth transition -->
+                <img class="mx-4 inline h-16" src="img/logos/australia-aid.png" alt="australia-aid" />
+                <img class="mx-4 inline h-16" src="img/logos/cima.png" alt="cima" />
+                <img class="mx-4 inline h-16" src="img/logos/cinnamon-hotels.png" alt="cinnamon-hotels" />
+                <img class="mx-4 inline h-16" src="img/logos/clear-media.png" alt="clear-media" />
+                <img class="mx-4 inline h-16" src="img/logos/goethe.png" alt="goethe" />
+                <img class="mx-4 inline h-16" src="img/logos/hatch.png" alt="hatch" />
+                <img class="mx-4 inline h-16" src="img/logos/john-keells-holdings.png" alt="john-keells-holdings" />
+                <img class="mx-4 inline h-16" src="img/logos/john-keells-prperties.png" alt="john-keells-prperties" />
+                <img class="mx-4 inline h-16" src="img/logos/koica-logo.png" alt="koica" />
+                <img class="mx-4 inline h-16" src="img/logos/mas.png" alt="MAS holdings" />
+                <img class="mx-4 inline h-16" src="img/logos/MBA-Alumini.png" alt="MBA-Alumini" />
+                <img class="mx-4 inline h-16" src="img/logos/mdf.png" alt="mdf" />
+                <img class="mx-4 inline h-16" src="img/logos/softlogic-life.png" alt="softlogic-life" />
+                </div>
+            </div>
         </div>
     </section>
         
