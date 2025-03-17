@@ -1,0 +1,15 @@
+<!-- _includes/team.html -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="section-heading text-center">Meet Our Team</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {% for member in site.data.team %}
+      <div class="team-card-body">
+        <div class="team-card-image-container">
+          <img src="{{ site.baseurl }}/assets/img/{{ member.image }}" alt="{{ member.name }}" class="team-card-image" />
+        </div>
+        <h3 class="team-card-heading">{{ member.name }}</h3>
+        <p class="team-card-desc">{{ member.position }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
