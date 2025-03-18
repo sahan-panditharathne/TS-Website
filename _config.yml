@@ -56,14 +56,15 @@ plugins:
 
 # Custom variables
 address: "125/1, Temple Road, Nawala"
-phone: "+1 (123) 456-7890"
+phone: "+94 71 540 4159"
 business_hours: "Monday - Friday: 9:00 AM - 5:00 PM"
+map: "https://maps.app.goo.gl/twps9YoZXXcfzFQG7"
 
 # Social media
 social:
-  facebook: "#"
-  linkedin: "#"
-  instagram: "#"
+  facebook: "https://www.instagram.com/thamaya.solutions/"
+  linkedin: "https://www.facebook.com/Thamaya.solutions"
+  instagram: "https://www.linkedin.com/company/thamaya-solutions/"
 
 # Collections
 collections:
