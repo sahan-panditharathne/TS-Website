@@ -23,7 +23,7 @@ email: connect@thamaya.com
 description: >- # this means to ignore newlines until "baseurl:"
   From concept ideation, to brand design and final creation Thamaya Solutions has you covered.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://thamaya.com/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
