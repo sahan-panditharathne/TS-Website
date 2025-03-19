@@ -6,6 +6,6 @@
 - title: Services
   url: "#services"
 - title: Gallery
-  url: "#gallery"
+  url: "/gallery/"
 - title: Contact Us
   url: "#contact-us"
