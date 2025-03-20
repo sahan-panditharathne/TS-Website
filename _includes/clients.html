@@ -15,8 +15,9 @@
             <!-- Ensure that the images cover entire screen width for a smooth transition -->
             {% assign image_files = site.static_files | where_exp: "file", "file.path contains '/assets/img/logos/'" %}
             <!-- Process each image -->
-            <img class="mx-4 inline h-16 px-4" src="{{ image.path | relative_url }}" alt="{{ image.name }}">
-            {% endfor %}
+                {% for image in image_files %}
+                <img class="mx-4 inline h-16 px-4" src="{{ image.path | relative_url }}" alt="{{ image.name }}">
+                {% endfor %}
             </div>
         </div>
     </div>
