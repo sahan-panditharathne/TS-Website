@@ -62,9 +62,9 @@ map: "https://maps.app.goo.gl/twps9YoZXXcfzFQG7"
 
 # Social media
 social:
-  facebook: "https://www.instagram.com/thamaya.solutions/"
-  linkedin: "https://www.facebook.com/Thamaya.solutions"
-  instagram: "https://www.linkedin.com/company/thamaya-solutions/"
+  facebook: "https://www.facebook.com/Thamaya.solutions"
+  linkedin: "https://www.linkedin.com/company/thamaya-solutions/" 
+  instagram: "https://www.instagram.com/thamaya.solutions/"
 
 # Collections
 collections:
