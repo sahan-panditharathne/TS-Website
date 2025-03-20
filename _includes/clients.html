@@ -1,0 +1,28 @@
+<section class="max-w-6xl mx-auto px-4 py-16">
+    <div class=" rounded-xl p-6 transition-shadow duration-300">
+        <h2 class="section-heading text-center">Our Clients</h2>
+        <div class="logos group relative overflow-hidden whitespace-nowrap py-3 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)] ">
+            <div class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+            <!-- Ensure that the images cover entire screen width for a smooth transition -->
+            {% assign image_files = site.static_files | 
+                where_exp: "file", "file.path contains '/assets/img/logos/'" | 
+                where_exp: "file", "file.extname == '.jpg' or file.extname == '.png' or file.extname == '.jpeg'" %}
+            {% for image in image_files %}
+            <!-- Process each image -->
+            <img class="mx-4 inline h-16 px-4" src="{{ image.path | relative_url }}" alt="{{ image.name }}">
+            {% endfor %}
+            </div>
+            <!--Duplicate of the logos-->
+            <div class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+            <!-- Ensure that the images cover entire screen width for a smooth transition -->
+            {% assign image_files = site.static_files | 
+                where_exp: "file", "file.path contains '/assets/img/logos/'" | 
+                where_exp: "file", "file.extname == '.jpg' or file.extname == '.png' or file.extname == '.jpeg'" %}
+            {% for image in image_files %}
+            <!-- Process each image -->
+            <img class="mx-4 inline h-16 px-4" src="{{ image.path | relative_url }}" alt="{{ image.name }}">
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
