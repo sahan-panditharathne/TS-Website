@@ -1,0 +1,14 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body class="min-h-screen" style="background-image: url('{{ site.baseurl }}/assets/img/Artboard 1-min.png'); background-position: center top; background-repeat: repeat-y; background-size: cover;">
+    {% include header.html %}
+    
+    <main class="max-w-6xl mx-auto">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>

@@ -1,0 +1,11 @@
+# _data/navigation.yml
+- title: Home
+  url: "#hero"
+- title: About Us
+  url: "#about-us"
+- title: Services
+  url: "#services"
+- title: Gallery
+  url: "/gallery/"
+- title: Contact Us
+  url: "#contact-us"
