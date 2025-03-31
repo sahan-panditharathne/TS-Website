@@ -1,4 +1,4 @@
-<section class="w-full bg-white py-3">
+<section class="w-full bg-white py-6">
   <div class="container mx-auto max-w-6xl mb-4">
     <!-- Main Heading -->
     <h1 class="section-heading">What We Do</h1>
@@ -13,6 +13,24 @@
         </div>
       </div> 
       {% endfor %}    
+    </div>
+    <div id="hero" class="text-center py-20 px-4 text-center mt-20">
+      <h1 class="text-9xl text-black opacity-70 font-bold">Driven <br>by Vision</h1>
+      <p class="mt-8 text-lg text-black opacity-70 max-w-4xl mx-auto mb-8">Providing creative solutions for creative brands </p>
+    </div>
+    <div class="grid grid-cols-2 mt-20 md:grid-cols-4 gap-6">
+      <div class="w-xs">
+          <H2 class="text-5xl text-black font-bold opacity-70">
+          Defined by <br><br> expelence
+          </H2>
+      </div>
+      {% for record in site.data.statsv2 %}
+      <div class="text-black opacity-70 w-3xs">
+          <H1 class="text-4xl">{{record.value}}</H1><br>
+          <h2 class="text-2xl">{{record.title}}</h2><br>
+          <p class="text-lg">{{record.description}}</p>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
