@@ -15,20 +15,20 @@
       {% endfor %}    
     </div>
     <div class="text-center py-20 px-4 text-center mt-[10rem] h-[35rem] align-middle">
-      <h1 class="text-9xl text-black opacity-70 font-bold">Driven <br>by Vision</h1>
-      <p class="mt-8 text-lg text-black opacity-70 max-w-4xl mx-auto mb-8">Providing creative solutions for creative brands </p>
+      <h1 class="text-9xl text-black opacity-70 font-bold">Driven <br>by vision</h1>
+      <p class="mt-8 text-2xl text-black opacity-70 max-w-4xl mx-auto mb-8">Providing creative solutions for creative brands </p>
     </div>
     <div class="grid grid-cols-2 mt-20 md:grid-cols-5 gap-2">
       <div class="col-span-2">
           <H2 class="text-6xl text-black font-bold opacity-70">
-          Defined by <br><br> excellence
+          Defined by <br> excellence
           </H2>
       </div>
       {% for record in site.data.statsv2 %}
       <div class="text-black opacity-70">
           <H1 class="text-4xl">{{record.value}}</H1><br>
           <h2 class="text-2xl">{{record.title}}</h2><br>
-          <p class="text-lg">{{record.description}}</p>
+          <p class="">{{record.description}}</p>
       </div>
       {% endfor %}
     </div>
