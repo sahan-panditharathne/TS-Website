@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -15,7 +16,8 @@
                     Blue: '#9dd0c9'
                     },
                     fontFamily: {
-                    'body': ['"Poppins"'],
+                    'sans': ['"Poppins"', 'sans-serif'], // Change this line
+                    'body': ['"Poppins"', 'sans-serif'],  // Add fallback
                     },
                     keyframes: {
                         'slide-left': {
@@ -31,6 +33,13 @@
         }
     </script>
     <style type="text/tailwindcss">
+        @layer base {
+            /* Add this block to set Poppins as default */
+            html {
+                font-family: 'Poppins', sans-serif;
+            }
+        }
+        
         @layer components {
             .menu-item {
                 @apply hover:underline hover:underline-offset-4 hover:decoration-white hover:decoration-4;
