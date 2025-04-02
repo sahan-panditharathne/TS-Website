@@ -1,15 +1,32 @@
-<!-- _includes/header.html -->
 <nav class="pb-0 px-4 mt-0 border-white">
-    <div class="max-w-6xl m-auto">
-      <div class="flex justify-between items-center">
-        <div class="size-40">
-          <img src="{{ site.baseurl }}/assets/img/logov2.png" alt="Thamaya solutions logo">
-        </div>
-        <div class="hidden md:flex space-x-16 text-xl text-white">
-          {% for item in site.data.navigation %}
-            <a href="{{ item.url }}" class="menu-item">{{ item.title }}</a>
-          {% endfor %}
-        </div>
+  <div class="max-w-6xl m-auto">
+    <div class="flex justify-between items-center">
+      <div class="size-40">
+        <img src="{{ site.baseurl }}/assets/img/logov2.png" alt="Thamaya solutions logo">
+      </div>
+
+      <div class="md:hidden">
+        <button id="hamburger" class="text-white focus:outline-none">
+          <svg class="size-10 fill-current" viewBox="0 0 24 24">
+            <path id="hamburger-icon" fill-rule="evenodd" clip-rule="evenodd" d="M4 6H20V8H4V6ZM4 12H20V14H4V12ZM4 18H20V20H4V18Z"/>
+            <path id="close-icon" class="hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.707 5.293a1 1 0 0 0-1.414-1.414L12 10.586 6.707 5.293a1 1 0 0 0-1.414 1.414L10.586 12 5.293 17.293a1 1 0 0 0 1.414 1.414L12 13.414l5.293 5.293a1 1 0 0 0 1.414-1.414L13.414 12l5.293-5.293z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div id="nav-menu" class="hidden md:flex space-x-16 text-xl text-white">
+        {% for item in site.data.navigation %}
+          <a href="{{ item.url }}" class="menu-item">{{ item.title }}</a>
+        {% endfor %}
       </div>
     </div>
-  </nav>
+
+    <div id="mobile-nav" class="hidden md:hidden mt-4">
+      <div class="flex flex-col space-y-4 text-xl text-white">
+        {% for item in site.data.navigation %}
+          <a href="{{ item.url }}" class="menu-item">{{ item.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</nav>

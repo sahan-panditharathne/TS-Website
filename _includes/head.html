@@ -68,6 +68,19 @@
         }
     </style>
     <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const mobileNav = document.getElementById('mobile-nav');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+    <script>
         function filterGallery(category) {
             // Update active button state
             const buttons = document.querySelectorAll('.filter-btn');
