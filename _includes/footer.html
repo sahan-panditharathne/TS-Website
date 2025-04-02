@@ -2,12 +2,12 @@
 <footer class="bg-white/30 py-12">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div>
+        <div class="">
           <img src="{{ site.baseurl }}/assets/img/logo.png" alt="Thamaya solutions logo">
         </div>
         
         {% for column in site.data.footer.columns %}
-          <div>
+          <div class="">
             <h3 class="font-bold mb-4">{{ column.title }}</h3>
             
             {% if column.items %}
