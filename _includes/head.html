@@ -68,15 +68,20 @@
         }
     </style>
     <script>
-        function filterGallery(category) {
+        function filterGallery(category, event) {
             // Update active button state
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
-                btn.classList.remove('bg-teal-600', 'text-white');
-                btn.classList.add('bg-white');
+                if (btn === event.currentTarget) {
+                    // Apply selected style to the clicked button
+                    btn.classList.remove('text-white', 'hover:bg-gray-200', 'hover:text-gray-800', 'hover:rounded-full');
+                    btn.classList.add('bg-gray-200', 'text-gray-800', 'rounded-full');
+                } else {
+                    // Apply unselected style to all other buttons
+                    btn.classList.remove('bg-gray-200', 'text-gray-800', 'rounded-full');
+                    btn.classList.add('text-white', 'hover:bg-gray-200', 'hover:text-gray-800', 'hover:rounded-full');
+                }
             });
-            event.currentTarget.classList.remove('bg-white');
-            event.currentTarget.classList.add('bg-teal-600', 'text-white');
     
             // Filter gallery items
             const items = document.querySelectorAll('.gallery-item');

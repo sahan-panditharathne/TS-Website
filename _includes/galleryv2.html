@@ -1,56 +1,55 @@
-<!-- Gallery Section -->
- <section class="max-w-6xl mx-auto px-4 py-16" id="gallery">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-    <div class="grid gap-4">
-        <div class="">
-            <h2 class="section-heading">Gallery</h2>
-            <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('all')">All</div>
-            <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('events')">Events</div>
-            <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer"onclick="filterGallery('fabrications')">Fabrications</div>
-            <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('luxury-packaging')">Luxury Packaging</div>
-            <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('design-concepts')">Design & Concept</div>
-            <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('creative-direction')">Creative Direction</div>
+<section class="max-w-6xl mx-auto px-4 py-16" id="gallery">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid gap-4">
+            <div class="">
+                <h2 class="section-heading">Gallery</h2>
+                <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('all', event)">All</div>
+                <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('events', event)">Events</div>
+                <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('fabrications', event)">Fabrications</div>
+                <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('luxury-packaging', event)">Luxury Packaging</div>
+                <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('design-concepts', event)">Design & Concept</div>
+                <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('creative-direction', event)">Creative Direction</div>
+                <div class="text-white hover:bg-gray-200 hover:text-gray-800 hover:rounded-full px-4 py-1 cursor-pointer" onclick="filterGallery('interior', event)">Interior</div>
+            </div>
+            <div data-category="events" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/creative_direction/Clear x Thamaya Solutions promotional photoshoot .jpg" alt="">
+            </div>
+            <div data-category="design-concepts" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/design_concepts/The-concept-Match-box_3.jpg" alt="">
+            </div>
         </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="assets/img/creative_direction/exhibition-stall.jpg" alt="">
+        <div class="grid gap-4">
+            <div data-category="events" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/events/1 Goethe JISR - Thamaya Solutions .jpg" alt="">
+            </div>
+            <div data-category="fabrications" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/fabrications/d68de88a-4a6b-4862-a444-d5b4519afe92.JPG" alt="">
+            </div>
+            <div data-category="interior" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/interior/5b346f8b-bc75-4868-9262-4d904243fad9.JPG" alt="">
+            </div>
         </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="assets/img/events/coffee.jpg" alt="">
+        <div class="grid gap-4">
+            <div data-category="luxury-packaging" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/packaging/concept-teal-box.JPG" alt="">
+            </div>
+            <div data-category="creative-direction" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/creative_direction/creative_direction.jpg" alt="">
+            </div>
+            <div data-category="events" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/events/1. Cinnamon empower her - Thamaya solutions - 3.jpg" alt="">
+            </div>
+        </div>
+        <div class="grid gap-4">
+            <div data-category="fabrications" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/fabrications/Exhibtion Stall Booth - Thamaya Solutions  2.JPG" alt="">
+            </div>
+            <div data-category="interior" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/interior/e26adea0-303c-4fa1-9a1d-2e21e2b840ee.jpg" alt="">
+            </div>
+            <div data-category="luxury-packaging" class="gallery-item">
+                <img class="h-full max-w-full rounded-lg" src="assets/img/packaging/The concept - top and bottom box_2.jpg" alt="">
+            </div>
         </div>
     </div>
-    <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="assets/img/design_concepts/The-concept-Match-box_3.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="assets/img/fabrications/exhibition-stall.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
-        </div>
-    </div>
-    <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
-        </div>
-    </div>
-    <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
-        </div>
-    </div>
-</div>
-
 </section>
