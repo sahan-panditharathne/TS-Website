@@ -9,13 +9,17 @@ columns:
   
   - title: What we do
     links:
-      - text: Design & Concepts
-        url: "#"
-      - text: Events
-        url: "#"
-      - text: Fabrications
+      - text: Event Management
         url: "#"
       - text: Creative Direction
+        url: "#"
+      - text: Interior Design
+        url: "#"
+      - text: Design & Concepts
+        url: "#"
+      - text: Luxury Packaging
+        url: "#"
+      - text: Fabrications
         url: "#"
   
   - title: Follow Us
