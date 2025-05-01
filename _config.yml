@@ -72,3 +72,6 @@ collections:
     output: true
   team:
     output: false
+
+# Permalinks
+calendly: "https://calendly.com/sahanpanditharathne/30min"
